@@ -20,6 +20,7 @@ from vendors import views
 
 router = routers.DefaultRouter()
 router.register(r'vendors', views.VendorViewSet)
+router.register(r'items', views.ItemViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
