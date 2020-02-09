@@ -18,7 +18,7 @@ class Item(models.Model):
     """
     Item is a menu item that the Vendor provides
     """
-    vendor = models.ForeignKey(Vendor, on_delete=models.CASCADE)
+    vendor = models.ForeignKey(Vendor, related_name='items', on_delete=models.CASCADE)
     name = models.CharField(max_length=120)
     description = models.TextField()
     image = models.CharField(max_length=400)
