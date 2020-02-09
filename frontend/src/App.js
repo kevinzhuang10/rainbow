@@ -24,32 +24,12 @@ import VendorCard from './VendorCard'
 //     </div>
 //   );
 // }
-const vendors = [
-  {
-    name: 'freshly',
-    description: 'best fresh food',
-    link: 'freshly.com',
-    image: 'fresh.com'
-  },
-  {
-    name: 'mealpro',
-    description: 'strong meals',
-    link: 'mealpro.com',
-    image: 'meal.com'
-  },
-  {
-    name: 'local Foodz',
-    description: 'high protein',
-    link: 'food.com',
-    image: 'local.com'
-  }
-];
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      vendors: vendors
+      vendors: []
     };
   }
 
