@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .vscode/
+
+frontend/.yarn/cache/
+frontend/.yarn/build-state*
