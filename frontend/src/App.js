@@ -1,58 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import axios from 'axios';
-import VendorCard from './VendorCard'
+import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import AddToDo from './containers/AddToDo';
+import ToDoListContainer from './containers/ToDoListContainer';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      vendors: []
-    };
-  }
-
-  async componentDidMount() {
-    try {
-      const vendors = await axios.get('/api/vendors');
-      console.log(vendors.data);
-      this.setState({
-        vendors: vendors.data
-      })
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
+class App extends Component {
   render() {
     return (
-      <div>
-        {this.state.vendors.map(vendor => <VendorCard vendor={vendor}/>)}
-      </div>
-    )
+      <Container>
+        <Row className="row">
+          <Col xs={12}>
+            <h1>To Do List</h1>
+            <AddToDo />
+            <ToDoListContainer />
+          </Col>
+        </Row>
+      </Container>
+    );
   }
 }
-
 
 export default App;
