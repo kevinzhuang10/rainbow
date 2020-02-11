@@ -1,19 +1,30 @@
 import React from 'react';
 import { Card, Button, ListGroupItem } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 // import './VendorCard.css';
 
-const VendorListItem = ({ vendor }) => {
+const VendorListItem = ({ vendor, selectVendor }) => {
+  console.log('vendor', vendor);
   return (
     <ListGroupItem>
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={vendor.image} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Card.Title>{vendor.name}</Card.Title>
+          <Card.Text>{vendor.description}</Card.Text>
+          <Link to={`/vendors/${vendor.id}`}>
+            <Button
+              {...{
+                variant: 'primary',
+                onClick: event => {
+                  console.log('vendor id', vendor.id);
+                  // selectVendor(vendor.id);
+                }
+              }}
+            >
+              {vendor.name}
+            </Button>
+          </Link>
         </Card.Body>
       </Card>
     </ListGroupItem>

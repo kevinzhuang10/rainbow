@@ -1,9 +1,9 @@
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { createStore, applyMiddleware } from 'redux';
+// import { composeWithDevTools } from "redux-devtools-extension";
 import createSagaMiddleware from 'redux-saga';
-import rootReducer from "./reducers";
-import rootSaga from './sagas';
-import { loadToDoList } from './actions';
+import rootReducer from './reducers';
+// import rootSaga from './sagas';
+// import { loadToDoList } from './actions';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -14,11 +14,11 @@ const middleware = [sagaMiddleware];
 const store = createStore(
   rootReducer,
   initialState,
-  composeWithDevTools(applyMiddleware(...middleware))
+  applyMiddleware(...middleware)
 );
 
-sagaMiddleware.run(rootSaga);
+// sagaMiddleware.run(rootSaga);
 
-store.dispatch(loadToDoList());
+// store.dispatch(loadToDoList());
 
 export default store;

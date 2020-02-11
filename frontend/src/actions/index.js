@@ -1,19 +1,6 @@
-export const ADD_TODO = 'ADD_TODO';
-export const LOAD_TODO_LIST = 'LOAD_TODO_LIST';
-export const RENDER_TODO_LIST = 'RENDER_TODO_LIST';
+import { SELECT_VENDOR } from '../constants/ActionTypes';
 
-export function addToDo(title) {
-  return {
-    type: ADD_TODO,
-    toDoItem: {
-      _id: new Date().getTime(),
-      title
-    }
-  };
-}
-
-export function loadToDoList() {
-  return {
-    type: LOAD_TODO_LIST
-  };
-}
+export const selectVendor = id => ({
+  type: SELECT_VENDOR,
+  id
+});

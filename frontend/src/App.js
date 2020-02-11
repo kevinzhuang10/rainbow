@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import VendorList from './containers/VendorList';
+import VendorListContainer from './containers/VendorListContainer';
 import { Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
+import VendorViewContainer from './containers/VendorViewContainer';
 
 class App extends Component {
   render() {
@@ -12,9 +13,10 @@ class App extends Component {
       <Container>
         <Row className="row">
           <Col xs={12}>
-            <h1>To Do List</h1>
+            <h1>Rainbow</h1>
             <Navigation />
-            <Route exact path="/" component={VendorList} />
+            <Route exact path="/" component={VendorListContainer} />
+            <Route path="/vendors/:id" component={VendorViewContainer} />
           </Col>
         </Row>
       </Container>
