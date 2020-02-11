@@ -1,1 +1,2 @@
 export const SELECT_VENDOR = 'SELECT_VENDOR';
+export const FETCH_VENDOR_ITEMS = 'FETCH_VENDOR_ITEMS';

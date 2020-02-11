@@ -13,6 +13,10 @@ export function* loadToDoList() {
   yield takeEvery(LOAD_TODO_LIST, fetchToDoList);
 }
 
+export function* watchFetchVendorItems() {
+    // how do i consume the payload coming from the "FetchVendorItems" action?
+}
+
 export default function* rootSaga() {
   yield all([loadToDoList()]);
 }
