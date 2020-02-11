@@ -1,29 +1,10 @@
-import { ADD_TODO } from '../actions';
-import { RENDER_TODO_LIST } from '../actions';
+import { combineReducers } from 'redux';
+import vendors from './vendors';
+import items from './items';
+import cart from './cart';
 
-const initialState = {
-  toDoList: []
-};
-
-export default function toDoApp(state = initialState, action) {
-  switch (action.type) {
-    case RENDER_TODO_LIST:
-      return {
-        ...state,
-        toDoList: action.toDoList
-      };
-    case ADD_TODO:
-      let newToDoList = [
-        ...state.toDoList,
-        {
-          ...action.toDoItem
-        }
-      ];
-      return {
-        ...state,
-        toDoList: newToDoList
-      };
-    default:
-      return state;
-  }
-}
+export default combineReducers({
+  vendors,
+  items,
+  cart
+});

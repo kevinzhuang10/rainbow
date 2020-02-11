@@ -6049,6 +6049,7 @@ __metadata:
     bootstrap: ^4.4.1
     husky: ^4.2.1
     lint-staged: ^10.0.7
+    lodash: ^4.17.15
     prettier: ^1.19.1
     prop-types: ^15.7.2
     react: ^16.12.0
@@ -6058,6 +6059,7 @@ __metadata:
     react-router-dom: ^5.1.2
     react-scripts: 3.3.1
     redux: ^4.0.5
+    redux-devtools: ^3.5.0
     redux-saga: ^1.1.3
     rxjs-compat: ^6.5.4
   languageName: unknown
@@ -8627,7 +8629,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lodash@npm:>=3.5 <5, lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.5":
+"lodash@npm:>=3.5 <5, lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.5, lodash@npm:^4.2.0":
   version: 4.17.15
   resolution: "lodash@npm:4.17.15"
   checksum: b018ec8d4c95f14a4b57005a247eca1bc25639322939471a1958d3bc721b4f18e90edb6ea564854593a8bc1f94956a0352cf0cd372991b98c42d61c0cd11e5a3
@@ -11280,7 +11282,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.5.7, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -11890,6 +11892,31 @@ fsevents@^1.2.7:
     indent-string: ^4.0.0
     strip-indent: ^3.0.0
   checksum: 55983b363f96f5b55663c001c1b9cb4e090d82e18ce6baad1076d6aac400306f8d2f45e9bdaf11e7a4400660b95a81e3251eb2c8cfc6df175105be5bb778fcd4
+  languageName: node
+  linkType: hard
+
+"redux-devtools-instrument@npm:^1.9.0":
+  version: 1.9.6
+  resolution: "redux-devtools-instrument@npm:1.9.6"
+  dependencies:
+    lodash: ^4.2.0
+    symbol-observable: ^1.0.2
+  checksum: d33611c6f0e5351d215b72962859affeda98951fa13d9248ac3fba5158379e920e492fdfb7be29caacf78200b7fc7e3fa7b348d356c9f32439674832ee540e0d
+  languageName: node
+  linkType: hard
+
+"redux-devtools@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "redux-devtools@npm:3.5.0"
+  dependencies:
+    lodash: ^4.2.0
+    prop-types: ^15.5.7
+    redux-devtools-instrument: ^1.9.0
+  peerDependencies:
+    react: ^0.14.9 || ^15.3.0 || ^16.0.0
+    react-redux: ^4.0.0 || ^5.0.0 || ^6.0.0
+    redux: ^3.5.2 || ^4.0.0
+  checksum: c084a5d494ba097993347937f8d2e2e0aa757e67b594b84570e5e32ab6df145e216c43e2733e785ac807ecc9b188bf45241859beb08d9b1741c55dfd8e7e68c4
   languageName: node
   linkType: hard
 
@@ -13409,7 +13436,7 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"symbol-observable@npm:^1.1.0, symbol-observable@npm:^1.2.0":
+"symbol-observable@npm:^1.0.2, symbol-observable@npm:^1.1.0, symbol-observable@npm:^1.2.0":
   version: 1.2.0
   resolution: "symbol-observable@npm:1.2.0"
   checksum: b033c8d6fa245a68b421b891b2fe07a9459274593405250918c7aea7ce4e991a94b1491bae1b68a8d90bd05c35a2f6862258b97334931df13850fe4daa0b2999
