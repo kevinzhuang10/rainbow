@@ -13,17 +13,7 @@ const VendorListItem = ({ vendor, selectVendor }) => {
           <Card.Title>{vendor.name}</Card.Title>
           <Card.Text>{vendor.description}</Card.Text>
           <Link to={`/vendors/${vendor.id}`}>
-            <Button
-              {...{
-                variant: 'primary',
-                onClick: event => {
-                  console.log('vendor id', vendor.id);
-                  // selectVendor(vendor.id);
-                }
-              }}
-            >
-              {vendor.name}
-            </Button>
+            <Button variant="primary">{vendor.name}</Button>
           </Link>
         </Card.Body>
       </Card>

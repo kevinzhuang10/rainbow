@@ -6,5 +6,6 @@ export const selectVendor = id => ({
 });
 
 export const fetchVendorItems = id =>({
-  type: FETCH_VENDOR_ITEMS
+  type: FETCH_VENDOR_ITEMS,
+  id
 })

@@ -39,7 +39,6 @@ const initialState = [
 const vendors = (state = initialState, action) => {
   switch (action.type) {
     case SELECT_VENDOR:
-      console.log('action here', action);
       return state;
     default:
       return state;

@@ -1,9 +1,9 @@
-import { createStore, applyMiddleware } from 'redux';
-// import { composeWithDevTools } from "redux-devtools-extension";
+import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from './reducers';
-// import rootSaga from './sagas';
-// import { loadToDoList } from './actions';
+import rootSaga from './sagas';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -14,11 +14,9 @@ const middleware = [sagaMiddleware];
 const store = createStore(
   rootReducer,
   initialState,
-  applyMiddleware(...middleware)
+  composeEnhancers(applyMiddleware(...middleware))
 );
 
-// sagaMiddleware.run(rootSaga);
-
-// store.dispatch(loadToDoList());
+sagaMiddleware.run(rootSaga);
 
 export default store;
