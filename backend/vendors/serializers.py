@@ -4,7 +4,7 @@ from .models import Vendor, Item
 class ItemSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Item
-        fields = ['id', 'name', 'description', 'image', 'price', 'vendor']
+        fields = ['id', 'name', 'description', 'image', 'price', 'vendor_id']
 
 class VendorSerializer(serializers.HyperlinkedModelSerializer):
     items = ItemSerializer(many=True, read_only=True)

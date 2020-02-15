@@ -3,7 +3,7 @@ import { Card, Button, ListGroupItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 // import './VendorCard.css';
 
-const VendorListItem = ({ vendor, selectVendor }) => {
+const VendorListItem = ({ vendor }) => {
   console.log('vendor', vendor);
   return (
     <ListGroupItem>

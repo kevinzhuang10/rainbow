@@ -1,5 +1,3 @@
-import { SELECT_VENDOR } from '../constants/ActionTypes';
-
 const initialState = [
   {
     id: 1,
@@ -38,8 +36,6 @@ const initialState = [
 
 const vendors = (state = initialState, action) => {
   switch (action.type) {
-    case SELECT_VENDOR:
-      return state;
     default:
       return state;
   }

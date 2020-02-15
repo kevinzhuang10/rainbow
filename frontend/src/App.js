@@ -7,6 +7,7 @@ import { Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import VendorViewContainer from './containers/VendorViewContainer';
 import ItemViewContainer from './containers/ItemViewContainer';
+import CartViewContainer from './containers/CartViewContainer';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route exact path="/" component={VendorListContainer} />
             <Route path="/vendors/:id" component={VendorViewContainer} />
             <Route path="/items/:id" component={ItemViewContainer} />
+            <Route path="/cart" component={CartViewContainer} />
           </Col>
         </Row>
       </Container>
