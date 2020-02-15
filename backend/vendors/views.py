@@ -17,4 +17,11 @@ class ItemViewSet(viewsets.ModelViewSet):
     permission_classes = [
         permissions.AllowAny
     ]
+
+    def get_queryset(self):
+        queryset = Item.objects.all()
+        vendor_id = self.request.query_params.get('vendorId', None)
+        if vendor_id is not None:
+            queryset = queryset.filter(vendor_id=vendor_id)
+        return queryset
     

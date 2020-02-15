@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 
-export default () => (
-  <div>
-    <Link className="btn btn-primary" to="/">
-      To-Do List
-    </Link>
-    <Link className="btn btn-secondary" to="/new-item">
-      + Add New
-    </Link>
-  </div>
+const Navigation = () => (
+  <Nav variant="tabs" defaultActiveKey="/">
+    <Nav.Item>
+      <Nav.Link>
+        <Link to="/">Home</Link>
+      </Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link>
+        <Link to="/cart">Cart</Link>
+      </Nav.Link>
+    </Nav.Item>
+  </Nav>
 );
+
+export default Navigation;

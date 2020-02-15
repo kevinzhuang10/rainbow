@@ -6,6 +6,7 @@ import VendorListContainer from './containers/VendorListContainer';
 import { Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import VendorViewContainer from './containers/VendorViewContainer';
+import ItemViewContainer from './containers/ItemViewContainer';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
             <Navigation />
             <Route exact path="/" component={VendorListContainer} />
             <Route path="/vendors/:id" component={VendorViewContainer} />
+            <Route path="/items/:id" component={ItemViewContainer} />
           </Col>
         </Row>
       </Container>

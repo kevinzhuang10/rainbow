@@ -1,5 +1,6 @@
 import React from 'react';
 import { ListGroupItem, Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ItemListItem = ({ item }) => {
   return (
@@ -8,7 +9,9 @@ const ItemListItem = ({ item }) => {
         <Card.Body>
           <Card.Title>{item.name}</Card.Title>
           <Card.Text>{item.description}</Card.Text>
+          <Link to={`/items/${item.id}`}>
           <Button variant="primary">Details</Button>
+          </Link>
         </Card.Body>
       </Card>
     </ListGroupItem>
